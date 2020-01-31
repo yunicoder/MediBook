@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wQw-P0-s2w">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--カメラ画面-->
+        <scene sceneID="Tbi-7S-qp0">
+            <objects>
+                <viewController title="カメラ画面" id="wQw-P0-s2w" customClass="CameraViewController" customModule="MediBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLN-zW-MWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="o25-Ht-Kcz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="xVE-BA-E87"/>
+                    <navigationItem key="navigationItem" id="3UQ-SZ-rcr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="TRp-1E-LSN" kind="show" identifier="ModalSegue" id="Vh0-N6-yDE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kei-ME-kBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186.95652173913044" y="86.383928571428569"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="PWh-3h-ZuH">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="TRp-1E-LSN" customClass="ModalViewController" customModule="MediBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFh-Dt-X3W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QV-wH-tg2">
+                                <rect key="frame" x="42" y="57" width="330" height="623"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="drugimage" translatesAutoresizingMaskIntoConstraints="NO" id="GwX-GA-j0p">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="367"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DrugName" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDD-0A-Umx">
+                                        <rect key="frame" x="35" y="403" width="260" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="9tK-sZ-ZoF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-3O-Yna">
+                                        <rect key="frame" x="216" y="499" width="60" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Scq-vn-euv"/>
+                                            <constraint firstAttribute="width" constant="60" id="ZDa-4x-4Qp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="詳細"/>
+                                        <connections>
+                                            <segue destination="g3E-Re-i23" kind="show" identifier="toEditsegue" id="KNW-ot-mNO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEU-C2-1Cl">
+                                        <rect key="frame" x="54" y="499" width="60" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="ZtN-YE-2kA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <segue destination="41W-sH-ynV" kind="unwind" unwindAction="myUnwindActionFor:towardsViewController:" id="MaQ-4b-o7s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.79360087906129184" green="1" blue="0.84261482776576746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yDD-0A-Umx" secondAttribute="bottom" constant="148" id="Bt8-Er-aI0"/>
+                                    <constraint firstItem="GwX-GA-j0p" firstAttribute="leading" secondItem="6QV-wH-tg2" secondAttribute="leading" id="Cj4-Bz-TO8"/>
+                                    <constraint firstAttribute="bottom" secondItem="XeW-3O-Yna" secondAttribute="bottom" constant="88" id="EME-un-GAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="GwX-GA-j0p" secondAttribute="trailing" id="EfR-5A-FVc"/>
+                                    <constraint firstAttribute="trailing" secondItem="XeW-3O-Yna" secondAttribute="trailing" constant="54" id="GXn-uX-VV2"/>
+                                    <constraint firstItem="yDD-0A-Umx" firstAttribute="centerX" secondItem="GwX-GA-j0p" secondAttribute="centerX" id="PAO-iZ-bL0"/>
+                                    <constraint firstAttribute="bottom" secondItem="hEU-C2-1Cl" secondAttribute="bottom" constant="88" id="Wv7-Nm-BOX"/>
+                                    <constraint firstItem="yDD-0A-Umx" firstAttribute="top" secondItem="GwX-GA-j0p" secondAttribute="bottom" constant="36" id="a1O-T0-QaR"/>
+                                    <constraint firstItem="GwX-GA-j0p" firstAttribute="top" secondItem="6QV-wH-tg2" secondAttribute="top" id="frY-Jc-MaZ"/>
+                                    <constraint firstItem="hEU-C2-1Cl" firstAttribute="leading" secondItem="6QV-wH-tg2" secondAttribute="leading" constant="54" id="h44-sn-Wgp"/>
+                                    <constraint firstItem="yDD-0A-Umx" firstAttribute="leading" secondItem="6QV-wH-tg2" secondAttribute="leading" constant="35" id="lPg-uo-sgB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sFu-pF-iL0" firstAttribute="trailing" secondItem="6QV-wH-tg2" secondAttribute="trailing" constant="42" id="4x0-OF-aB1"/>
+                            <constraint firstItem="sFu-pF-iL0" firstAttribute="bottom" secondItem="6QV-wH-tg2" secondAttribute="bottom" constant="56" id="LA2-J5-Rer"/>
+                            <constraint firstItem="6QV-wH-tg2" firstAttribute="top" secondItem="sFu-pF-iL0" secondAttribute="top" constant="57" id="ZMy-xS-hSF"/>
+                            <constraint firstItem="6QV-wH-tg2" firstAttribute="leading" secondItem="sFu-pF-iL0" secondAttribute="leading" constant="42" id="eRd-eB-k1Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sFu-pF-iL0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="anV-Zq-sLy"/>
+                    <connections>
+                        <outlet property="DrugName" destination="yDD-0A-Umx" id="xeV-oR-q4h"/>
+                        <outlet property="drugimage" destination="GwX-GA-j0p" id="PJZ-Hs-9gA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Flv-WB-bX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="41W-sH-ynV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1034.7826086956522" y="85.59782608695653"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="IAY-7r-1pn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Edit" id="g3E-Re-i23" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kFx-7g-5Cz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEK-xg-xuO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="-57"/>
+        </scene>
+    </scenes>
+</document>
