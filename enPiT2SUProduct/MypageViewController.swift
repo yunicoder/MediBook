@@ -30,13 +30,15 @@ class MypageViewController: UIViewController, UICollectionViewDataSource, UIColl
         //***************************
         
         // 擬似データの登録
-        let tempMediInfo = [
+        /*
+         let tempMediInfo = [
             MediData(itemcode: "drug-pony:10530591", name: "ロキソニンSプレミアム", imgUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/drug-pony/cabinet/shohin/4987107619006.jpg?_ex=128x128", memo: "僕のお気に入りです", isPossession: false, isFav: true, genre: "頭痛・痛み止め", isRemind: [false, false, false]),
         MediData(itemcode: "drug-pony:10768170", name: "バファリンA", imgUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/drug-pony/cabinet/shohin3/4903301010982.jpg?_ex=128x128", memo: "よく頭痛の時に飲む", isPossession: true, isFav: true, genre: "頭痛・痛み止め", isRemind: [true, false, true]),
         MediData(itemcode: "drug-pony:10757307", name: "ベンザブロックSプラス", imgUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/drug-pony/cabinet/shohin/4987123700818.jpg?_ex=128x128", memo: "あまり効かない", isPossession: true, isFav: true, genre: "風邪", isRemind: [true, true, true]),
         MediData(itemcode: "drug-pony:10760123", name: "ガスター10", imgUrl: "https://thumbnail.image.rakuten.co.jp/@0_mall/drug-pony/cabinet/shohin/4987107600035.jpg?_ex=128x128", memo: "まあまいい", isPossession: true, isFav: false, genre: "胃腸薬", isRemind: [false, false, false])]
         mediInfo.append(contentsOf: tempMediInfo)
         saveMediInfoMulti(mediInfo) // 擬似データのセーブ
+        */
         
         favoriteCollectionView.delegate = self    // サイズやマージンなどレイアウトに関する処理の委譲
         favoriteCollectionView.dataSource = self  // 要素の数やセル、クラスなどデータの元となる処理の委譲

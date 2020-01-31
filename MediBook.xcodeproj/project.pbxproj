@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C01FD9D7231F8B18003FC9AF /* enPiT2SUProduct */ = {
+		C01FD9D7231F8B18003FC9AF /* MediBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FD9ED231F8B19003FC9AF /* Build configuration list for PBXNativeTarget "enPiT2SUProduct" */;
+			buildConfigurationList = C01FD9ED231F8B19003FC9AF /* Build configuration list for PBXNativeTarget "MediBook" */;
 			buildPhases = (
 				C01FD9D4231F8B18003FC9AF /* Sources */,
 				C01FD9D5231F8B18003FC9AF /* Frameworks */,
@@ -203,7 +203,7 @@
 			);
 			dependencies = (
 			);
-			name = enPiT2SUProduct;
+			name = MediBook;
 			productName = enPiT2SUProduct;
 			productReference = C01FD9D8231F8B18003FC9AF /* MediBook.app */;
 			productType = "com.apple.product-type.application";
@@ -223,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C01FD9D3231F8B18003FC9AF /* Build configuration list for PBXProject "enPiT2SUProduct" */;
+			buildConfigurationList = C01FD9D3231F8B18003FC9AF /* Build configuration list for PBXProject "MediBook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -236,7 +236,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C01FD9D7231F8B18003FC9AF /* enPiT2SUProduct */,
+				C01FD9D7231F8B18003FC9AF /* MediBook */,
 			);
 		};
 /* End PBXProject section */
@@ -503,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FD9D3231F8B18003FC9AF /* Build configuration list for PBXProject "enPiT2SUProduct" */ = {
+		C01FD9D3231F8B18003FC9AF /* Build configuration list for PBXProject "MediBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FD9EB231F8B19003FC9AF /* Debug */,
@@ -512,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FD9ED231F8B19003FC9AF /* Build configuration list for PBXNativeTarget "enPiT2SUProduct" */ = {
+		C01FD9ED231F8B19003FC9AF /* Build configuration list for PBXNativeTarget "MediBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FD9EE231F8B19003FC9AF /* Debug */,
